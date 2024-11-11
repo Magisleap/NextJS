@@ -1,12 +1,11 @@
 services:
-  nextjs:
+  node:
     build:
       context: .
       dockerfile: Dockerfile
-    restart: always
     volumes:
-      - ../:/home/bun/app:cached
-      - node_modules:/home/bun/app/node_modules
+      - node_modules:/home/vscode/app/node_modules
+      - ../:/home/vscode/app:cached
     tty: true
     stdin_open: true
 
